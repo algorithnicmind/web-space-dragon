@@ -1,46 +1,46 @@
 # Web Space Dragon - Task Tracker
 
 ## Phase 1: Project Setup & Foundation
-- [ ] Initialize basic project files (`index.html`, `style.css`, `script.js`).
-- [ ] Set up the HTML5 Canvas element.
-- [ ] Implement the core Game Loop (`requestAnimationFrame`).
-- [ ] Implement basic State Management (Start, Playing, Game Over).
+- [x] Initialize basic project files (`index.html`, `style.css`, `script.js`).
+- [x] Set up the HTML5 Canvas element.
+- [x] Implement the core Game Loop (`requestAnimationFrame`).
+- [x] Implement basic State Management (Start, Playing, Game Over).
 
 ## Phase 2: Environment & Rendering
-- [ ] Create rendering utility functions.
-- [ ] Implement space background styling.
-- [ ] Implement scrolling ground mechanic.
-- [ ] Setup basic UI overlays (Start text, Game Over text).
+- [x] Create rendering utility functions.
+- [x] Implement space background styling.
+- [x] Implement scrolling ground mechanic.
+- [x] Setup basic UI overlays (Start text, Game Over text).
 
 ## Phase 3: Player Mechanics (The Space Dragon)
-- [ ] Create the Player entity class/object.
-- [ ] Implement gravity and physics variables.
-- [ ] Implement jump logic (velocity, gravity pulling down).
-- [ ] Map keyboard (Space/Up) and mouse/touch (Click) inputs to jump action.
-- [ ] Draw the basic visual representation of the dragon.
+- [x] Create the Player entity class/object.
+- [x] Implement gravity and physics variables.
+- [x] Implement jump logic (velocity, gravity pulling down).
+- [x] Map keyboard (Space/Up) and mouse/touch (Click) inputs to jump action.
+- [x] Draw the basic visual representation of the dragon.
 
 ## Phase 4: Obstacle System
-- [ ] Create Obstacle entity class/object.
-- [ ] Implement obstacle spawner with randomized intervals.
-- [ ] Make obstacles move left towards the player.
-- [ ] Remove obstacles once they exit the screen to free memory.
-- [ ] Draw the basic visual representation of obstacles.
+- [x] Create Obstacle entity class/object.
+- [x] Implement obstacle spawner with randomized intervals.
+- [x] Make obstacles move left towards the player.
+- [x] Remove obstacles once they exit the screen to free memory.
+- [x] Draw the basic visual representation of obstacles.
 
 ## Phase 5: Game Logic & Interaction
-- [ ] Implement AABB collision detection between Player and Obstacles.
-- [ ] Trigger Game Over state upon collision.
-- [ ] Stop game loop/movement on Game Over.
-- [ ] Implement restart mechanism.
+- [x] Implement AABB collision detection between Player and Obstacles.
+- [x] Trigger Game Over state upon collision.
+- [x] Stop game loop/movement on Game Over.
+- [x] Implement restart mechanism.
 
 ## Phase 6: Scoring System
-- [ ] Track score based on time survived.
-- [ ] Display current score on screen.
-- [ ] Save High Score to `localStorage`.
-- [ ] Display High Score on screen.
-- [ ] Gradually increase game speed as score increases.
+- [x] Track score based on time survived.
+- [x] Display current score on screen.
+- [x] Save High Score to `localStorage`.
+- [x] Display High Score on screen.
+- [x] Gradually increase game speed as score increases.
 
 ## Phase 7: Polish & Aesthetics
-- [ ] Refine graphics (colors, glow effects, shapes).
-- [ ] Add starfield parallax background effect.
-- [ ] Fine-tune jump physics for responsive feel.
-- [ ] Final testing and debugging.
+- [x] Refine graphics (colors, glow effects, shapes).
+- [x] Add starfield parallax background effect.
+- [x] Fine-tune jump physics for responsive feel.
+- [x] Final testing and debugging.
