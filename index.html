@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Space Dragon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div id="ui-layer">
+            <div id="score-display">Score: <span id="score">0</span></div>
+            <div id="high-score-display">HI: <span id="high-score">0</span></div>
+            <div id="start-screen" class="screen active">
+                <h1>Web Space Dragon</h1>
+                <p>Press SPACE or Click to Start</p>
+                <p class="instructions">Avoid the obstacles!</p>
+            </div>
+            <div id="game-over-screen" class="screen">
+                <h2>GAME OVER</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Press SPACE or Click to Restart</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
