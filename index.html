@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Space Dragon — A modern Chrome Dino game clone with power-ups, day/night cycle, character skins, and mobile support. Play now!">
+    <meta name="theme-color" content="#0a0a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Space Dragon — Endless Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Start Screen Overlay -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-content">
+                <h1 class="game-title">
+                    <span class="title-icon">🦕</span>
+                    <span class="title-text">SPACE DRAGON</span>
+                </h1>
+                <p class="subtitle">An Endless Runner Adventure</p>
+                <div class="start-prompt pulse">
+                    <span class="desktop-text">Press SPACE to Start</span>
+                    <span class="mobile-text">Tap to Start</span>
+                </div>
+                <div class="controls-info">
+                    <div class="control-row">
+                        <kbd>SPACE</kbd> / <kbd>↑</kbd> Jump
+                    </div>
+                    <div class="control-row">
+                        <kbd>↓</kbd> Duck
+                    </div>
+                    <div class="control-row">
+                        <kbd>ESC</kbd> Pause
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="gameover-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 class="gameover-title">GAME OVER</h2>
+                <div class="score-display">
+                    <div class="final-score">
+                        <span class="score-label">SCORE</span>
+                        <span id="final-score-value" class="score-value">0</span>
+                    </div>
+                    <div class="high-score-display">
+                        <span class="score-label">BEST</span>
+                        <span id="final-highscore-value" class="score-value hi">0</span>
+                    </div>
+                </div>
+                <div id="new-best" class="new-best hidden">★ NEW BEST! ★</div>
+                <button id="restart-btn" class="game-btn">
+                    <span class="btn-icon">↻</span> RESTART
+                </button>
+                <p class="restart-hint">
+                    <span class="desktop-text">or press SPACE</span>
+                    <span class="mobile-text">or tap to restart</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div id="pause-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 class="pause-title">PAUSED</h2>
+                <p class="pause-hint">Press ESC to resume</p>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div id="settings-panel" class="panel hidden">
+            <div class="panel-header">
+                <h3>⚙️ SETTINGS</h3>
+                <button id="settings-close-btn" class="close-btn">✕</button>
+            </div>
+            <div class="panel-body">
+                <!-- Volume -->
+                <div class="setting-group">
+                    <label class="setting-label">🔊 Volume</label>
+                    <input type="range" id="volume-slider" min="0" max="100" value="70" class="slider">
+                    <span id="volume-value" class="setting-value">70%</span>
+                </div>
+                <!-- Difficulty -->
+                <div class="setting-group">
+                    <label class="setting-label">📈 Difficulty</label>
+                    <select id="difficulty-select" class="game-select">
+                        <option value="easy">Easy</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="hard">Hard</option>
+                        <option value="insane">Insane</option>
+                    </select>
+                </div>
+                <!-- Graphics Quality -->
+                <div class="setting-group">
+                    <label class="setting-label">🖼️ Graphics</label>
+                    <select id="graphics-select" class="game-select">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high" selected>High</option>
+                    </select>
+                </div>
+                <!-- Skin Selector -->
+                <div class="setting-group">
+                    <label class="setting-label">🎨 Dino Skin</label>
+                    <div id="skin-grid" class="skin-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HUD Buttons (top-right) -->
+        <div id="hud-buttons">
+            <button id="sound-btn" class="hud-btn" title="Toggle Sound">🔊</button>
+            <button id="settings-btn" class="hud-btn" title="Settings">⚙️</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
