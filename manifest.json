@@ -1,0 +1,18 @@
+{
+    "name": "Space Dragon",
+    "short_name": "SpaceDragon",
+    "description": "An advanced Chrome Dino game clone with power-ups, day/night cycle, character skins, and mobile support.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "landscape",
+    "background_color": "#0a0a1a",
+    "theme_color": "#0a0a1a",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦕</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "categories": ["games", "entertainment"]
+}
