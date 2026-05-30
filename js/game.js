@@ -46,6 +46,9 @@ export class Game {
         this.highScore = storage.getHighScore();
         this._lastMilestone = 0;
 
+        // Game-over restart cooldown (prevents instant restart)
+        this._gameOverCooldown = 0;
+
         // Speed
         this.gameSpeed = INITIAL_SPEED;
 
@@ -166,6 +169,7 @@ export class Game {
         this.state = GameState.GAME_OVER;
         this.player.die();
         this.audio.playHit();
+        this._gameOverCooldown = 0.5; // 500ms before restart is allowed
 
         // Check high score
         const isNewBest = this.score > this.highScore;
@@ -246,7 +250,7 @@ export class Game {
                 this._handlePausedState();
                 break;
             case GameState.GAME_OVER:
-                this._handleGameOverState();
+                this._handleGameOverState(dt);
                 break;
         }
 
@@ -340,7 +344,12 @@ export class Game {
         }
     }
 
-    _handleGameOverState() {
+    _handleGameOverState(dt) {
+        // Cooldown prevents instant restart from the key that caused game over
+        if (this._gameOverCooldown > 0) {
+            this._gameOverCooldown -= dt;
+            return;
+        }
         if (this.input.anyPressed) {
             this.restart();
         }
