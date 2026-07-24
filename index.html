@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#0a0a1a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; worker-src 'self'; media-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="manifest" href="manifest.json">
     <title>Space Dragon — Endless Runner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,13 +131,5 @@
     </div>
 
     <script type="module" src="script.js"></script>
-    <script>
-        // Register Service Worker for PWA offline support
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').catch(() => {});
-            });
-        }
-    </script>
 </body>
 </html>
